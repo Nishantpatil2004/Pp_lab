@@ -52,4 +52,21 @@ return v2;
 
 } friend void exchange (AA &x, BB &y);
 };
-void exchange(AA 
+void exchange(AA x,BB y)
+{
+  int temp;
+temp=x.v1;
+x.v1=y.v2;
+y.v2=temp;
+}
+int main()
+{
+  AA a;
+BB b;
+a.setdata();
+b.setsata();
+cout<<"before exchange"<<a.display()<<b.display();
+exchange(a,b);
+cout<<"after exchange"<<a.display()<<b.display();
+return 0;
+}
